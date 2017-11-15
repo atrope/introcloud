@@ -6,6 +6,10 @@
 a {
     text-decoration: none;
 }
+body{
+  max-width: 1280px;
+  margin: 0 auto;
+}
 header,
 footer,
 main,
@@ -81,11 +85,11 @@ h1 {
     padding: 15px;
     width: 350px;
     height: 270px;
-    border: 1.5px solid #d9dbdf;
+    border: 1px solid #d9dbdf;
     border-radius: 3px;
     margin-top: 25px;
 }
-.infoRect .avatar-rect {
+.infoRect img {
     width: 60px;
     height: 60px;
     float: left;
