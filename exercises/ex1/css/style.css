@@ -84,14 +84,14 @@ h1 {
 .infoRect {
     padding: 15px;
     width: 350px;
-    height: 270px;
+    height: 250px;
     border: 1px solid #d9dbdf;
     border-radius: 3px;
     margin-top: 25px;
 }
 .infoRect img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     float: left;
     margin-right: 10px;
 }
@@ -100,7 +100,7 @@ h1 {
 }
 .infoRect h6 {
     color: #8e959c;
-    margin-top: 10px;
+    margin-top: 3px;
 }
 hr {
     width: 100%;
