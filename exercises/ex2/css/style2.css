@@ -9,7 +9,7 @@ a {
 body {
     max-width: 1000px;
     margin: 0 auto;
-    /*background: url(../img/layout_1.png) no-repeat;
+    /*background: url(../img/layout_2.png) no-repeat;
     background-position-x: center;*/
 }
 header,
@@ -32,67 +32,78 @@ footer {
     background-color: #d6d6d6;
 }
 nav {
-    height: 61px;
+    height: 758px;
     background-color: #337ab7;
-    line-height: 61px;
+    float: left;
+    width: 14.6%;
 }
 nav li {
     display: inline;
 }
 nav li a {
     color: #FFF;
-    padding: 12px 86px;
-    margin-left: 32px;
+    width: 100%;
+    display: block;
+    height: 59px;
+    line-height: 59px;
 }
 nav li a.active,
 nav li a:hover {
     background-color: #003748;
 }
+main {
+    float: right;
+    width: 85.4%;
+}
+.clear {
+    clear: both;
+}
 #rects {
-    width: 75.5%;
-    height: 697px;
+    width: 74.3%;
+    height: 758px;
+    float: right;
 }
 side {
-    width: 24.5%;
-    height: 697px;
+    width: 25.7%;
+    height: 758px;
     background-color: #EEE;
-    float: right;
+    float: left;
 }
 #rects .wrapper,
 side .wrapper {
-    width: 92.5%;
+    width: 98.2%;
     margin: 0 auto;
-    padding-top: 117px;
-    margin-left: 4.3%;
-}
-article {
-    margin-bottom: 29px;
-    width: 100%;
-    background-color: #62c462;
-    display: block;
-}
-#rects .first {
-    height: 119px;
-}
-#rects .second {
-    height: 200px;
-}
-#rects .third {
-    width: 26.1%;
-    float: right;
-    height: 122px;
-}
-#rects .fourth {
-    display: none;
-}
-side .first {
-    width: 82%;
-    float: right;
-    height: 125px;
-    margin-top: 148px;
+    padding-top: 23px
 }
 side .wrapper {
-    max-width: 91.5%;
+    width: 90%;
+}
+article {
+    margin-bottom: 23px;
+    width: 30.2%;
+    background-color: #62c462;
+    display: inline-block;
+    margin-right: 30px;
+    float: left;
+}
+#rects .first {
+    height: 510px;
+}
+#rects .second {
+    height: 324px;
+}
+#rects .third {
+    height: 387px;
+}
+#rects .fourth {
+    height: 124px;
+    position: fixed;
+    width: 188px;
+}
+side .first {
+    width: 40%;
+    height: 68px;
+    margin-top: 238px;
 }
 footer {
     height: 50px;
