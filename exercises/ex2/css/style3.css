@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+a {
+    text-decoration: none;
+}
+
+header,
+footer,
+main,
+nav,
+section,
+side {
+    display: block;
+}
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#logo {
+    width: 100%;
+    height: 193px;
+    background: url("../img/logo.png") no-repeat center;
+    background-size: 106px 104px;
+    display: block;
+}
+header,
+footer {
+    background-color: #d6d6d6;
+}
+nav {
+    height: 61px;
+    background-color: #337ab7;
+    line-height: 61px;
+        text-align: center;
+}
+nav li {
+    display: inline;
+}
+nav li a {
+    color: #FFF;
+    padding: 12px 86px;
+}
+nav li a.active,
+nav li a:hover {
+    background-color: #003748;
+}
+.square{
+  width: calc( 100% /3);
+  height: 0;
+  padding-bottom: calc( 100% /3); /* "Hack" to fully achieve square independent of the width */
+  display: inline-block;
+  float: left;
+}
+.square.starred{
+  background: url("../img/white_star.png") no-repeat center;
+}
+.square:last-child{
+  background: url("../img/white_plus.png") no-repeat center;
+}
+@media only screen and (max-width: 767px){
+  .square { width: 50%;   padding-bottom: 50%;}
+  nav li a { padding: 12px 5%}
+}
