@@ -60,6 +60,10 @@ nav li a:hover {
 .square:last-child{
   background: url("../img/white_plus.png") no-repeat center;
 }
+.clear{clear: both;}
+footer {
+    height: 50px;
+}
 @media only screen and (max-width: 767px){
   .square { width: 50%;   padding-bottom: 50%;}
   nav li a { padding: 12px 5%}
