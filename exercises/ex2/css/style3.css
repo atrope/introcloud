@@ -47,17 +47,17 @@ nav li a.active,
 nav li a:hover {
     background-color: #003748;
 }
-.square{
+rectangle{
   width: calc( 100% /3);
   height: 0;
   padding-bottom: calc( 100% /3); /* "Hack" to fully achieve square independent of the width */
   display: inline-block;
   float: left;
 }
-.square.starred{
+rectangle.starred{
   background: url("../img/white_star.png") no-repeat center;
 }
-.square:last-child{
+rectangle:last-child{
   background: url("../img/white_plus.png") no-repeat center;
 }
 .clear{clear: both;}
@@ -65,6 +65,6 @@ footer {
     height: 50px;
 }
 @media only screen and (max-width: 767px){
-  .square { width: 50%;   padding-bottom: 50%;}
+  rectangle { width: 50%;   padding-bottom: 50%;}
   nav li a { padding: 12px 5%}
 }
