@@ -1,23 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
-}
-a {
-    text-decoration: none;
-}
+/* When in production Minifying will remove all comments */
+/* Normalizing CSS */
+* {margin: 0;padding: 0;font-family: Arial; }
+a { text-decoration: none; }
+header,footer,main,nav,section,rectangle,side { display: block; }
+/* End Normalizing CSS */
 
-header,
-footer,
-main,
-nav,
-section,
-side {
-    display: block;
-}
+/* Defaults and wrappers*/
 #wrapper {
     max-width: 1000px;
     margin: 0 auto;
+}
+.wrapperinside {
+    width: 92.5%;
+    margin: 0 auto;
+    padding-top: 117px;
+    margin-left: 4.3%;
+}
+main.right .wrapperinside{
+    width: 98.2%;
+    padding-top: 23px
 }
 #logo {
     width: 100%;
@@ -26,73 +27,139 @@ side {
     background-size: 106px 104px;
     display: block;
 }
-header,
-footer {
-    background-color: #d6d6d6;
-}
+header,footer { background-color: #d6d6d6; }
+.clear {clear: both;}
+
+/* End Defaults */
+/* Nav */
 nav {
     height: 61px;
     background-color: #337ab7;
     line-height: 61px;
+    text-align: center;
+
 }
-nav li {
-    display: inline;
-}
+nav li { display: inline; }
 nav li a {
     color: #FFF;
     padding: 12px 86px;
-    margin-left: 32px;
 }
-nav li a.active,
-nav li a:hover {
-    background-color: #003748;
+nav li a.active,nav li a:hover { background-color: #003748; }
+
+nav.left {
+    height: 758px;
+    float: left;
+    width: 14.6%;
 }
-#rects {
+nav.left li a {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+/* end Nav */
+
+/* Main */
+
+main.right {
+    float: right;
+    width: 85.4%;
+}
+
+section {
     width: 75.5%;
     height: 697px;
 }
+main.right section {
+    width: 74.3%;
+    height: 758px;
+    float: right;
+}
+/* END main */
+/* sidebar */
+side .wrapperinside { max-width: 91.5%; }
+main.right side .wrapperinside { width: 90%; }
+
 side {
     width: 24.5%;
     height: 697px;
     background-color: #EEE;
     float: right;
 }
-#rects .wrapperinside,
-side .wrapperinside {
-    width: 92.5%;
-    margin: 0 auto;
-    padding-top: 117px;
-    margin-left: 4.3%;
+main.right side {
+    width: 25.7%;
+    height: 758px;
+    background-color: #EEE;
+    float: left;
 }
-article {
+
+/*  End Sidebar */
+
+/* Rectangles */
+rectangle {
     margin-bottom: 29px;
     width: 100%;
     background-color: #62c462;
-    display: block;
 }
-#rects .first {
-    height: 119px;
-}
-#rects .second {
-    height: 200px;
-}
-#rects .third {
+rectangle:first-child { height: 119px; }
+rectangle:nth-child(2) { height: 200px; }
+rectangle:nth-child(3) {
     width: 26.1%;
     float: right;
     height: 122px;
 }
-#rects .fourth {
-    display: none;
+rectangle:nth-child(4) { display: none; }
+
+main.right rectangle:first-child { height: 510px; }
+main.right rectangle:nth-child(2) { height: 324px; }
+main.right rectangle:nth-child(3) { height: 388px; }
+main.right rectangle:nth-child(4) {
+    height: 124px;
+    position: absolute;
+    width: 170px;
 }
-side .first {
+side rectangle:first-child {
     width: 82%;
     float: right;
     height: 125px;
     margin-top: 148px;
 }
-side .wrapperinside {
-    max-width: 91.5%;
+
+main.right rectangle {
+    margin-bottom: 23px;
+    width: 30.2%;
+    background-color: #62c462;
+    display: inline-block;
+    margin-right: 30px;
+    float: left;
 }
-footer {
-    height: 50px;
+main.right side rectangle:first-child {
+    width: 40%;
+    height: 68px;
+    margin-top: 238px;
 }
+rectangle.live{
+  width: calc( 100% /3);
+  height: 300px;
+  display: block;
+  float: left;
+  margin: 0;
+}
+rectangle.live.starred{ background: url("../img/white_star.png") no-repeat center;}
+rectangle.live:last-child{background: url("../img/white_plus.png") no-repeat center;}
+/*  End Rectangles */
+
+/* Footer */
+footer { height: 50px; }
+footer.fixed {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    max-width: 1000px;
+}
+/* End Footer */
+/* Init Media queries */
+@media only screen and (max-width: 767px){
+  rectangle { width: 50%;   padding-bottom: 50%;}
+  nav li a { padding: 12px 5%}
+}
+/* End Media queries */
