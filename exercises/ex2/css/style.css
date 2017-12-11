@@ -139,7 +139,8 @@ main.right side rectangle:first-child {
 }
 rectangle.live{
   width: calc( 100% /3);
-  height: 300px;
+  padding-bottom: 35%;
+  height: 0;
   display: block;
   float: left;
   margin: 0;
@@ -159,7 +160,7 @@ footer.fixed {
 /* End Footer */
 /* Init Media queries */
 @media only screen and (max-width: 767px){
-  rectangle { width: 50%;   padding-bottom: 50%;}
+  rectangle.live { width: 50%; padding-bottom: 55%;}
   nav li a { padding: 12px 5%}
 }
 /* End Media queries */
