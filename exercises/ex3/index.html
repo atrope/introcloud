@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Based on the code in: http://www.sitepoint.com/css3-starwars-scrolling-text -->
+    <meta charset="utf-8">
+    <title>Form Wars</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <form action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET">
+      <p class="center"> WHICH SIDE WILL YOU CHOOSE?</p>
+
+      <div class="inputContainer">
+          <input type="text" class="inputWithValidation" name="name" pattern="[a-zA-Z]+" placeholder="Padawan Name" required>
+          <span class="icon"></span>
+      </div>
+
+      <div class="inputContainer">
+          <input type="password" class="inputWithValidation" name="password" pattern=".{6,}" placeholder="Padawan Password" required>
+          <span class="icon"></span>
+      </div>
+      <div class="inputContainer">
+          <input type="email" class="inputWithValidation" name="email" placeholder="Padawan Email" required>
+          <span class="icon"></span>
+      </div>
+      <div class="inputContainer">
+          <input type="tel" class="inputWithValidation" name="telephone" pattern="[0-9]{6,10}" placeholder="Padawan Telephone" required>
+          <span class="icon"></span>
+      </div>
+      <div class="inputContainer">
+          <input type="text" class="inputWithValidation" name="quality" placeholder="Padawan BEST Quality">
+          <span class="icon"></span>
+
+      </div>
+      <div class="inputContainer">
+          <input type="text" class="inputWithValidation" name="galaxy" placeholder="Padawan Home Galaxy">
+          <span class="icon"></span>
+      </div>
+      <div class="inputContainer">
+          <select class="inputWithValidation" name="ships">
+              <option value="0">Favourite CSS3 Feature</option>
+              <option value="1">Selectors</option>
+              <option value="2">Rounded Corners</option>
+              <option value="3">Border Image</option>
+              <option value="4">Box Shadow</option>
+              <option value="5">Text Shadow</option>
+              <option value="6">Gradient</option>
+              <option value="7">Transform</option>
+              <option value="8">Web Fonts</option>
+              <option value="9">Pseudo Clases</option>
+              <option value="9">CSS3 is the Worst ever!</option>
+          </select>
+      </div>
+      <div class="inputContainer">
+          <select class="inputWithValidation">
+              <option value="0">Favourite JS Feature</option>
+              <option value="1">Default Parameters</option>
+              <option value="2">Template Literals</option>
+              <option value="3">Multi-line Strings</option>
+              <option value="4">Destructuring Assignment</option>
+              <option value="5">Enhanced Object Literals</option>
+              <option value="6">Arrow Functions</option>
+              <option value="7">Promises</option>
+              <option value="8">Let and Const</option>
+              <option value="9">Classes</option>
+              <option value="10">Modules</option>
+              <option value="11">Keep this AWAY FROM ME!</option>
+          </select>
+      </div>
+
+      <div class="slidecontainer">
+          <label for="slider"> How is your equilibrium with the force?(CPU/RAM)</label>
+
+          <input type="range" min="1" max="100" value="50" class="slider" id="slider">
+
+      </div>
+      <div class="warselect">
+          <input id="css" type="radio" name="sideradio" value="css" required />
+          <label class="imagelabel css" for="css"></label>
+          <input id="js" type="radio" name="sideradio" value="js" />
+          <label class="imagelabel js" for="js"></label>
+      </div>
+      <div>
+          <input type="checkbox" id="subscribe" name="subscribe" value="subscription" checked>
+          <label for="subscribe">I Accept receive news from the war</label>
+      </div>
+      <input type="submit" class="submit">
+
+  </form>
+    <p id="start">A short time ago in a competition far far away...</p>
+
+    <h1>FORM WARS<sub>the revenge of the CSS</sub></h1>
+
+    <div id="titles">
+        <div id="titlecontent">
+
+            <p class="center">EPISODE IV
+                <br />A NEW HOPE FOR THE BROWSERS</p>
+
+            <p>It is a period of inter browser war.</p>
+
+            <p>After the ancient war of Netscape against Explorer.</p>
+
+            <p>Where we had to had one code for each browser.</p>
+
+            <p>The galaxy again watch out for the recurring war of technology.</p>
+
+            <p>Javascript was leading the war against the CSS.</p>
+
+            <p>Chrome had lauched the V8 Engine and it looked like the end of the old CSS Religion.</p>
+
+            <p>But, a new hope has been lauched and CSS had a last resource.</p>
+
+            <p>CSS3 is here and this whole presentation is CSS Only.</p>
+
+            <p>All this code is run without any line of JS (just the audio delay, i am human after all) ...</p>
+
+            <p class="center">Here comes the form young padawan!</p>
+
+        </div>
+    </div>
+
+    <audio preload="auto" controls onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1500)">
+        <source src="sounds/MainTitle.ogx" type="audio/ogg" />
+    </audio>
+
+</body>
+
+</html>
