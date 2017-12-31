@@ -2,8 +2,8 @@
 $navitems = array(
   (object) array("name"=>"Home","page"=>"index.php","icon"=> "home"),
   (object) array("name"=>"Search","page"=>"search.php","icon"=> "search"),
-  (object)  array("name"=>"List","page"=>"index.php","icon"=> "list-ol"),
-  (object)  array("name"=>"Settings","page"=>"index.php","icon"=> "cog")
+  (object) array("name"=>"List","page"=>"index.php","icon"=> "list-ol"),
+  (object) array("name"=>"Settings","page"=>"index.php","icon"=> "cog")
 );
 ?>
 <nav class="navbar fixed-bottom navbar-lightBlue">

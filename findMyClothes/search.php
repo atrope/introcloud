@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
     <?php
       $title = "Find My Clothes - Search";
       include "header.php";
@@ -11,6 +8,5 @@
       $active = "Search";
       include "topnav.php";
       include "bottomnav.php";
+      include "footer.php";
     ?>
-  </body>
-</html>

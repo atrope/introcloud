@@ -5,12 +5,12 @@
       $title = "Find My Clothes - Home";
       include "header.php";
     ?>
-    </head>
-  <body>
     <?php
       $active = "Home";
       include "topnav.php";
+      ?>
+      <a href="product.php"> PRODUCT</a>
+      <?php
       include "bottomnav.php";
+      include "footer.php";
     ?>
-  </body>
-</html>
