@@ -67,6 +67,18 @@
   <button type="button" class="btn btn-block btn-info bg-lightBlue btn-find-store"><i class="fa fa-building px-3" aria-hidden="true"></i>Find the Clothe</button>
 </div>
 </div>
+<div class="row mt-3">
+  <div class="col">
+    <span>
+      <b>Best in town</b> <br>
+      <b>Color:</b> Black<br>
+      <b>Fabric:</b> 100% Cotton Lining: 100% Viscose<br>
+      <b>Features:</b> Custom Fit, Hand Tailored, 1 Button, Interior Pockets<br>
+      <b>Care:</b> Dry Clean Only<br>
+      <b>Made in Italy
+    </span>
+  </div>
+</div>
 
 </div>
 <?php

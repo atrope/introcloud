@@ -2,15 +2,17 @@
 $navitems = array(
   (object) array("name"=>"Home","page"=>"index.php","icon"=> "home","text"=>"Home"),
   (object) array("name"=>"Search","page"=>"search.php","icon"=> "search","text"=>"Search"),
-  (object) array("name"=>"List","page"=>"index.php","icon"=> "list-ol","text"=>"My Scanned Clothes"),
+  (object) array("name"=>"List","page"=>"myHistory.php","icon"=> "list-ol","text"=>"My Scanned Clothes"),
   (object) array("name"=>"Settings","page"=>"index.php","icon"=> "cog","text"=>"Settings"),
-  (object) array("name"=>"Settings","page"=>"index.php","icon"=> "bookmark","text"=>"Watchlist"),
+  (object) array("name"=>"Watchlist","page"=>"index.php","icon"=> "bookmark","text"=>"Watchlist"),
   (object) array("name"=>"Photos","page"=>"index.php","icon"=> "camera","text"=>"Photos Taken")
 );
 ?>
 <nav class="navbar fixed navbar-lightBlue">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-		<div class="collapse" id="navbarResponsive">
+  <h1 class="topTitle"><?php echo $active;?></h1>
+
+<div class="collapse" id="navbarResponsive">
 <header>
   <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">  <i class="fa fa-times" aria-hidden="true"></i>
 </button>

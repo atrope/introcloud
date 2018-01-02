@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
     <?php
       $title = "Find My Clothes - Home";
       include "header.php";
