@@ -5,9 +5,10 @@
   include "header.php";
   include "topnavstack.php";
   ?>
-<div class="container">
+
+    <div class="container">
   <div class="generic-cell store mt-3">
-    <a href="#"><div class="row">
+    <a href="store.php"><div class="row">
       <div class="col-12"><span class="d-block w-100 text-right p-2"><i class="fa fa-map-marker" aria-hidden="true"></i>  <small class="text-muted"> Rotschild Blvd. <b>0.3km</b> from you</small></span></div>
 
       <div class="col"> <img src="img/hugoboss.jpg" class="p-2 img-fluid" alt=""> </div>

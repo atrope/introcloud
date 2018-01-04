@@ -46,13 +46,13 @@
     </div>
   </div>
   <div class="col-6 text-right">
-    <form class="" action="#" method="post">
+    <form class="rating" action="#" method="post">
 
-    <i class="fa fa-star" aria-hidden="true"></i>
-    <i class="fa fa-star" aria-hidden="true"></i>
-    <i class="fa fa-star" aria-hidden="true"></i>
-    <i class="fa fa-star-o" aria-hidden="true"></i>
-    <i class="fa fa-star-o" aria-hidden="true"></i>
+    <i class="fa fa-star" aria-hidden="true" data-rate="1"></i>
+    <i class="fa fa-star" aria-hidden="true" data-rate="2"></i>
+    <i class="fa fa-star" aria-hidden="true" data-rate="3"></i>
+    <i class="fa fa-star-o" aria-hidden="true" data-rate="4"></i>
+    <i class="fa fa-star-o" aria-hidden="true" data-rate="5"></i>
     </form>
   </div>
   <div class="col-1 text-right">
@@ -75,7 +75,7 @@
       <b>Fabric:</b> 100% Cotton Lining: 100% Viscose<br>
       <b>Features:</b> Custom Fit, Hand Tailored, 1 Button, Interior Pockets<br>
       <b>Care:</b> Dry Clean Only<br>
-      <b>Made in Italy
+      <b>Made in Italy</b>
     </span>
   </div>
 </div>

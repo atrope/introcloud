@@ -29,12 +29,12 @@ $navitems = array(
   </div>
 </div>
 </header>
-<main>
+<div>
   <ul class="list-group">
     <?php foreach ($navitems as $ni){ ?>
         <li class="list-group-item border-0<?php if ($active === $ni->name) echo " active";?>"> <a href ="<?php echo $ni->page;?>"><i class="fa fa-<?php echo $ni->icon;?>"></i><?php echo $ni->text;?></a></li>
     <?php } ?>
 </ul>
-</main>
+</div>
 		</div>
 	</nav>
