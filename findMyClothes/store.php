@@ -2,7 +2,7 @@
   $title = "Find My Clothes - Store";
   $titlestack = "Hugo Boss - Rotschild Blvd";
   include "header.php";
-  include "topnavstack.php";
+  include "topnav.php";
   ?>
   <div class="container-fluid p-0">
     <img src="img/hugoboss.jpg" class="img-fluid" alt="Hugo Boss Logo">

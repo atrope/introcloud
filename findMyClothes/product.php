@@ -2,13 +2,14 @@
       $title = "Find My Clothes - Product";
       $titlestack = "Suit 100% Cotton";
       include "header.php";
-      include "topnavstack.php";
+      include "topnav.php";
       $specs = array(
         (object) array("alt"=>"Tuxedo with Men","src"=>"img/tux.jpg"),
         (object) array("alt"=>"Tuxedo no Men","src"=>"img/tuxnomen.jpg"),
         (object) array("alt"=>"Tuxedo with butterfly","src"=>"img/tuxbutter.jpg"),
       );
-      ?>
+      ?><div class="container">
+
     <div id="productCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
   <ol class="carousel-indicators round">
     <?php for ($i=0; $i < count($specs); $i++) { ?>
@@ -23,7 +24,6 @@
     <?php } ?>
   </div>
 </div>
-<div class="container">
   <div class="row mt-3">
   <div class="col">
     <div class="sizes d-inline">

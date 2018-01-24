@@ -1,11 +1,10 @@
     <?php
       $title = "Find My Clothes - Home";
       include "header.php";
-    ?>
-    <?php
       $active = "Home";
       include "topnav.php";
       ?>
+
       <div class="container">
         <div class="row mt-3">
           <div class="col">

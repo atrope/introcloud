@@ -3,7 +3,7 @@
   $titlestack = "Suit 100% Cotton";
 
   include "header.php";
-  include "topnavstack.php";
+  include "topnav.php";
   ?>
 
     <div class="container">
