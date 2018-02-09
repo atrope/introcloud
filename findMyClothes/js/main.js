@@ -2,6 +2,13 @@ $( document ).ready(function() {
   $('body').on('click','.backer',function(e){
     window.history.back();
   });
+  $(".search").keyup(function (e) {
+      if (e.which === 13) {
+          this.form.submit();
+      }
+  });
+
+
 
   $(".carousel").swipe({
      swipeRight: function() {$(this).carousel('prev')},
@@ -57,7 +64,6 @@ $( document ).ready(function() {
        }
      })
    });
-
 
    $('body').on('click','.rating',function(e){
      if ($(e.target).hasClass("fa")){

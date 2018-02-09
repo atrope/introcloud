@@ -11,11 +11,11 @@
 <div class="container">
 <div class="row">
 <div class="col-5 profilepic">
-  <img src="img/profiledavid.jpg" alt="" class="img-fluid rounded-circle">
+  <img src="img/profile.jpg" alt="" class="img-fluid rounded-circle">
 </div>
 <div class="col-7 profileinfo">
-  <span class="username d-block">David Beckham</span>
-  <span class="usermail d-block">david@beckham.com</span>
+  <span class="username d-block">Ella Cohen</span>
+  <span class="usermail d-block">ellacohen@gmail.com</span>
 </div>
 </div>
 </div>

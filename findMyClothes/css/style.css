@@ -1,4 +1,4 @@
-html {
+html,b {
     font-family: 'Roboto', sans-serif;
 }
 a:hover {
@@ -304,16 +304,28 @@ footer{background-color: #1d94ca;padding: 30px 0; height: 230px;}
 .single_footer_widget.apps li.btn-app .app-android:hover {
     background: url('../img/bt_google_play.png') center center no-repeat
 }
-
+.img-fluid.qrcode{max-width: 80%;}
 .single_footer_widget.apps li.btn-app-apple .app-apple:hover {
     background: url('../img/bt_app_store.png') center center no-repeat
 }
+.search{border-top: 1px solid #979797;
+    border-left: 1px solid #a6a6a6;
+    border-bottom: 1px solid #c7c7c7;
+    border-right: 1px solid #adadad;
+    width: 97%;
+    border-radius: 20px;
+    padding: 5px 5px 5px 15px;
+    max-width: 455px;
+    font-family: FontAwesome,'Roboto', sans-serif;
+    max-height: 30px;
 
+  }
+  form.rating {
+    cursor: pointer;
+}
 .item img { max-height: 169px;
     width: 100%;}
-
-
-    @media only screen and (min-width: 767px)  {
+@media only screen and (min-width: 767px)  {
       .navbar.top{background:#FFF;
         height: 70px;
         line-height: 70px;

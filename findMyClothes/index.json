@@ -1,0 +1,44 @@
+{
+   "topPromotion":{
+      "title":"Silvester is Here",
+      "subliner":"It's the best party of the year!",
+      "sublineralt":"Go out and meet new people",
+      "img":"img/cheers.png"
+   },
+   "bottomPromotion":{
+     "title":"Shine in the party",
+     "sub":"Here are the best suggestions for your taste",
+   "cards":[
+      {
+         "id":1,
+         "img":"img/FOKXDPsmLF.png",
+         "likes":203451,
+         "saved":0
+      },
+      {
+         "id":2,
+         "img":"img/SGOXEY4bqv.png",
+         "likes":21231,
+         "saved":0
+      },
+      {
+         "id":3,
+         "img":"img/u9IPSJRUiL.png",
+         "likes":1203,
+         "saved":1
+      },
+      {
+         "id":4,
+         "img":"img/kSe4o9argz.png",
+         "likes":3451,
+         "saved":1
+      },
+      {
+         "id":5,
+         "img":"img/QBj99hLK7v.jpg",
+         "likes":132451,
+         "saved":0
+      }
+   ]
+}
+}

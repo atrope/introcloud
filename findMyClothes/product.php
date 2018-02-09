@@ -1,7 +1,10 @@
     <?php
       $title = "Find My Clothes - Product";
-      $titlestack = "Suit 100% Cotton";
       include "header.php";
+      $id = isset($_GET["id"]) && is_numeric($_GET["id"])?$_GET["id"]:0;
+      $product = execSQL("SELECT p.id,p.title,p.color,p.description,p.features,p.care,c.name as country from 214_products p INNER JOIN 214_country c on p.country=c.id where p.id = :id", array(":id" => $id));
+      if(!$product) die("ID NOT FOUND");
+      $titlestack = $product->title;
       include "topnav.php";
       $specs = array(
         (object) array("alt"=>"Tuxedo with Men","src"=>"img/tux.jpg"),
@@ -70,12 +73,11 @@
 <div class="row mt-3">
   <div class="col">
     <span>
-      <b>Best in town</b> <br>
-      <b>Color:</b> Black<br>
-      <b>Fabric:</b> 100% Cotton Lining: 100% Viscose<br>
-      <b>Features:</b> Custom Fit, Hand Tailored, 1 Button, Interior Pockets<br>
-      <b>Care:</b> Dry Clean Only<br>
-      <b>Made in Italy</b>
+      <b><?php echo $product->description;?></b> <br>
+      <b>Color:</b> <?php echo $product->color;?><br>
+      <b>Features:</b> <?php echo $product->features;?><br>
+      <b>Care:</b> <?php echo $product->care;?><br>
+      <b>Made in <?php echo $product->country;?></b>
     </span>
   </div>
 </div>

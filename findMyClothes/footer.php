@@ -1,5 +1,5 @@
 </div>
-</div>
+
 <div class="setfooter d-none d-md-flex">
 </div>
 <footer class="d-none d-md-flex">
