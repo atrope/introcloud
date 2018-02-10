@@ -1,4 +1,5 @@
-    <?php
+<?php
+include "helper.php";
       $title = "Find My Clothes - Product";
       include "header.php";
       $id = isset($_GET["id"]) && is_numeric($_GET["id"])?$_GET["id"]:0;
@@ -7,9 +8,9 @@
       $titlestack = $product->title;
       include "topnav.php";
       $specs = array(
-        (object) array("alt"=>"Tuxedo with Men","src"=>"img/tux.jpg"),
-        (object) array("alt"=>"Tuxedo no Men","src"=>"img/tuxnomen.jpg"),
-        (object) array("alt"=>"Tuxedo with butterfly","src"=>"img/tuxbutter.jpg"),
+        (object) array("alt"=>"$product->title #1","src"=>"img/products/$product->id/1.jpg"),
+        (object) array("alt"=>"$product->title #2","src"=>"img/products/$product->id/2.jpg"),
+        (object) array("alt"=>"$product->title #3","src"=>"img/products/$product->id/3.jpg"),
       );
       ?><div class="container">
 
@@ -28,7 +29,7 @@
   </div>
 </div>
   <div class="row mt-3">
-  <div class="col">
+  <div class="col-5">
     <div class="sizes d-inline">
       <input type="radio" id ="small-product" name="sizeradio" value="S" checked>
       <label for="small-product">
@@ -48,19 +49,19 @@
       </label>
     </div>
   </div>
-  <div class="col-6 text-right">
+  <div class="col-5 text-right">
     <form class="rating" action="#" method="post">
 
-    <i class="fa fa-star" aria-hidden="true" data-rate="1"></i>
-    <i class="fa fa-star" aria-hidden="true" data-rate="2"></i>
-    <i class="fa fa-star" aria-hidden="true" data-rate="3"></i>
-    <i class="fa fa-star-o" aria-hidden="true" data-rate="4"></i>
-    <i class="fa fa-star-o" aria-hidden="true" data-rate="5"></i>
+    <i class="fa fa-lg fa-star" aria-hidden="true" data-rate="1"></i>
+    <i class="fa fa-lg fa-star" aria-hidden="true" data-rate="2"></i>
+    <i class="fa fa-lg fa-star" aria-hidden="true" data-rate="3"></i>
+    <i class="fa fa-lg fa-star-o" aria-hidden="true" data-rate="4"></i>
+    <i class="fa fa-lg fa-star-o" aria-hidden="true" data-rate="5"></i>
     </form>
   </div>
-  <div class="col-1 text-right">
+  <div class="col-2 text-right">
     <a href="#" class="bookmark">
-      <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+      <i class="fa fa-lg fa-bookmark-o" aria-hidden="true"></i>
     </a>
   </div>
   </div>

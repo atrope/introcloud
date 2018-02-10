@@ -3,7 +3,7 @@ $navitems = array(
   (object) array("name"=>"Home","page"=>"index.php","icon"=> "home"),
   (object) array("name"=>"Search","page"=>"search.php","icon"=> "search"),
   (object) array("name"=>"History","page"=>"myHistory.php","icon"=> "list-ol"),
-  (object) array("name"=>"Settings","page"=>"index.php","icon"=> "cog")
+  (object) array("name"=>"Settings","page"=>"settings.php","icon"=> "cog")
 );
 ?>
 <nav class="navbar fixed-bottom navbar-lightBlue d-md-none d-xl-none d-lg-none">

@@ -14,6 +14,40 @@ $( document ).ready(function() {
      swipeRight: function() {$(this).carousel('prev')},
      swipeLeft: function() {$(this).carousel('next')}
    });
+   $('.settings form').on('submit',function(e){
+     e.preventDefault();
+     swal({title: 'Updating settings..',onOpen: () => { swal.showLoading(); }});
+     var formObj = $(this);
+     var formURL = formObj.attr("action");
+     var serial = formObj.serialize();
+     $.getJSON(formURL, serial, function(data) {
+       swal.hideLoading();
+       if (data.status==200){
+         $(".userdropname,.username").text(data.username);
+         $(".usermail").text(data.email);
+         swal.close();
+         swal('Great!','Settings were updated!','success');
+       }
+       else swal(':(','Something unexpected happened!','error');
+
+     })
+     .fail(function() { swal.hideLoading(); swal(':(','Something unexpected happened!','error'); })
+
+   });
+
+   $('.famous').on('click',' .item',function(e){
+     curItem = $(this).find(".fa-calendar");
+     swal({
+       title: 'A Confirmation mail was sent!',
+       type: 'success',
+       timer: 1500,
+       onOpen: () => { swal.showLoading(); }
+     }).then((result) => {
+       if (result.dismiss === 'timer') {
+         curItem.toggleClass("active");
+       }
+     })
+   });
 
    $('body').on('click','.btn-buy',function(e){
      swal({
@@ -43,7 +77,7 @@ $( document ).ready(function() {
        onOpen: () => { swal.showLoading(); }
      }).then((result) => {
        if (result.dismiss === 'timer') {
-         window.location.href = window.location.href.replace("search","product");
+         window.location.href = window.location.href.replace("search","product")+"?id="+(Math.floor(Math.random() * 4) + 1);
        }
      })
    });
@@ -80,7 +114,7 @@ $( document ).ready(function() {
      }
    });
 
-   $('body').on('click','.bookmark',function(e){
+   $('body').on('click','.recommendations .bookmark',function(e){
      $(this).find(".fa").toggleClass("fa-bookmark-o").toggleClass("fa-bookmark");
    });
 

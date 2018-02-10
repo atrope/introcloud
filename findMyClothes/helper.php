@@ -1,5 +1,7 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['userid'])) $_SESSION['userid'] = 1; //Hardcoding for now;
+$uid = $_SESSION['userid'];
 function getDB(){
   $user     = "auxstudDB7c";
   $password = "auxstud7cDB1!";
@@ -20,4 +22,9 @@ function execSQL($query,$values,$return=true){
   }
   return false;
 }
- ?>
+function sanitizeName($name){
+  return strtolower(str_replace(" ","",$name));
+}
+$user = execSQL("SELECT * from 214_users where id = :id",array(":id"=>$uid));
+
+?>

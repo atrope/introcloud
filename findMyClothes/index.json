@@ -11,33 +11,27 @@
    "cards":[
       {
          "id":1,
-         "img":"img/FOKXDPsmLF.png",
+         "img":"img/products/1/1.jpg",
          "likes":203451,
          "saved":0
       },
       {
          "id":2,
-         "img":"img/SGOXEY4bqv.png",
+         "img":"img/products/2/1.jpg",
          "likes":21231,
          "saved":0
       },
       {
          "id":3,
-         "img":"img/u9IPSJRUiL.png",
+         "img":"img/products/3/1.jpg",
          "likes":1203,
          "saved":1
       },
       {
          "id":4,
-         "img":"img/kSe4o9argz.png",
+         "img":"img/products/4/1.jpg",
          "likes":3451,
          "saved":1
-      },
-      {
-         "id":5,
-         "img":"img/QBj99hLK7v.jpg",
-         "likes":132451,
-         "saved":0
       }
    ]
 }

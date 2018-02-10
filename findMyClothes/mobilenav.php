@@ -14,8 +14,8 @@
   <img src="img/profile.jpg" alt="" class="img-fluid rounded-circle">
 </div>
 <div class="col-7 profileinfo">
-  <span class="username d-block">Ella Cohen</span>
-  <span class="usermail d-block">ellacohen@gmail.com</span>
+  <span class="username d-block"><?php echo $user->name; ?></span>
+  <span class="usermail d-block"><?php echo $user->email; ?></span>
 </div>
 </div>
 </div>

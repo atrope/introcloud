@@ -19,5 +19,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
 </head>
 <body>
-<?php include "helper.php";
-?>

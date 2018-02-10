@@ -6,7 +6,7 @@ function createCard(item,appendto){
   let innerdiv = $('<div />',{ class: "col p-3 text-left" }).appendTo(row);
   let small = $('<small />',{ class: "w-100 d-block pl-2",text: Number(item.likes).toLocaleString('il')+" Saved this" }).appendTo(innerdiv);
   let fa = $('<a />',{ href: "#",class:"bookmark pull-right pr-2" }).appendTo(small);
-  let i = $('<i />',{ href: "#",class:"fa"}).addClass(item.saved?"fa-bookmark":"fa-bookmark-o").appendTo(fa);
+  let i = $('<i />',{ href: "#",class:"fa fa-lg"}).addClass(item.saved?"fa-bookmark":"fa-bookmark-o").appendTo(fa);
 }
 
 $( document ).ready(function() {

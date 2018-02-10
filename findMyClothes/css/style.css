@@ -1,4 +1,4 @@
-html,b {
+html,b,strong {
     font-family: 'Roboto', sans-serif;
 }
 a:hover {
@@ -30,6 +30,12 @@ button {
 }
 .drop-user img{
   width: 34px;
+}
+.settings .rounded-circle{
+  width: 65px;
+}
+.settings .userdropname{
+  font-size: 26px;
 }
 .bg-lightBlue{
   background-color: #1d94ca;
@@ -121,7 +127,8 @@ margin: 0;
 }
 #productCarousel .carousel-item,#productCarousel .carousel-item img{ height: 360px; }
 .bookmark .fa-bookmark-o,.fa-map-o{ color: #000; }
-.bookmark .fa-bookmark {color: #ffee58;}
+.fa-calendar{color:#FFF}
+.fa-calendar.active,.bookmark .fa-bookmark {color: #ffee58;}
 .sizes>input {
     position: absolute;
     width: 0;
@@ -212,7 +219,7 @@ span.title{ font-size: 1.3rem; }
 span.subtitle { font-size: 0.71rem; }
 
 
-.testimonial-group ::-webkit-scrollbar {
+.recommendations ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
@@ -223,8 +230,7 @@ span.subtitle { font-size: 0.71rem; }
   white-space: nowrap;
 }
 
-.recommendations .item { width: 45%; color: #fff;   background: #1d94ca;     max-width: 200px; }
-
+.item { width: 45%; color: #fff;   background: #1d94ca;     max-width: 200px; }
 
 
 
@@ -323,8 +329,10 @@ footer{background-color: #1d94ca;padding: 30px 0; height: 230px;}
   form.rating {
     cursor: pointer;
 }
-.item img { max-height: 169px;
-    width: 100%;}
+.recommendations .item img {     width: 100%;height: 169px;}
+.famous .item .imgcontainer { background: #FFF;    max-height: 100px;padding: 30px 5px;; height: 100px;}
+
+
 @media only screen and (min-width: 767px)  {
       .navbar.top{background:#FFF;
         height: 70px;

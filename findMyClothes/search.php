@@ -1,4 +1,5 @@
-    <?php
+<?php
+include "helper.php";
       $title = "Find My Clothes - Search";
       $active = "Search";
       include "header.php";

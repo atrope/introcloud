@@ -1,9 +1,10 @@
 <?php
-  $title = "Find My Clothes - My Scanned Clothes";
-  $active = "History";
-  include "header.php";
-  include "topnav.php";
-  ?>
+include "helper.php";
+$title = "Find My Clothes - My Scanned Clothes";
+$active = "History";
+include "header.php";
+include "topnav.php";
+?>
 <div class="container">
 
   <div class="generic-cell mt-3">
