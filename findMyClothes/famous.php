@@ -1,7 +1,7 @@
 <?php
 include "helper.php";
 $title = "Find My Clothes - Be Famous";
-$active = "Be famous";
+$active = "Famous";
 include "header.php";
 include "topnav.php";
 $dates = array(

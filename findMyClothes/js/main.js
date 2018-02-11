@@ -77,7 +77,7 @@ $( document ).ready(function() {
        onOpen: () => { swal.showLoading(); }
      }).then((result) => {
        if (result.dismiss === 'timer') {
-         window.location.href = window.location.href.replace("search","product")+"?id="+(Math.floor(Math.random() * 4) + 1);
+         window.location.href = window.location.href.replace("search","product")+"?id="+(Math.floor(Math.random() * 6) + 1);
        }
      })
    });

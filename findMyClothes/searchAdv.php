@@ -1,16 +1,18 @@
 <?php
 include "helper.php";
-$title = "Find My Clothes - My Scanned Clothes";
-$products = execSQL("SELECT p.id,p.title from 214_products p INNER JOIN 214_history c on p.id=c.productsId where c.userId = :id", array(":id" => $uid));
-$active = "History";
+$search = isset($_POST["search"])?$_POST["search"]:"";
+$title = "Find My Clothes - Search";
+if($search) $products = execSQL("SELECT * from 214_products p where title LIKE :search or color = :color", array(":search" => "%$search%",":color"=>$search));
+$active = "Search";
 include "header.php";
 include "topnav.php";
 ?>
 <div class="container">
 
 <?php
-  if (!$products){
-    $errmsg = "You dont have any history yet.. Go Explore more!";
+  if (!isset($products) || !$products){
+    $errmsg = "Nothing found for ";
+    $errmsg.=$search?$search:"your query";
     include "error.php";
   }
   else{

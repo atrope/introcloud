@@ -1,5 +1,5 @@
 function createCard(item,appendto){
-  let d = $('<div />',{ class: "item d-inline-block border-0 mr-2 mt-2" }).appendTo(appendto);
+  let d = $('<div />',{ class: "item d-inline-block border-0 mr-2 mr-md-5 mt-2" }).appendTo(appendto);
   let a = $('<a />',{ href: "product.php?id="+item.id }).appendTo(d);
   let img = $('<img />',{ class: 'img-fluid',src: item.img }).appendTo(a);
   let row = $('<div />',{ class: "row" }).appendTo(d);
@@ -12,13 +12,13 @@ function createCard(item,appendto){
 $( document ).ready(function() {
 $.getJSON("./index.json",function(json){
   let container = $('<div />',{ class: "container" }).prependTo($('nav + .wrapper'));
-  let d = $('<div />',{ class: "row mt-3" }).appendTo(container);
+  let d = $('<div />',{ class: "row mt-3 topPromo" }).appendTo(container);
   let innerdiv = $('<div />',{ class: "col" }).appendTo(d);
   let img = $('<img />',{ class: 'img-fluid',src: json.topPromotion.img }).appendTo(innerdiv);
-  let sinnerdiv = $('<div />',{ class: "col-6 p-0" }).appendTo(d);
-  $('<span />',{ class: "title", text: json.topPromotion.title}).appendTo(sinnerdiv);
-  $('<span />',{ class: "mb-0 mt-2 d-block subtitle", text: json.topPromotion.subliner }).appendTo(sinnerdiv);
-  $('<span />',{ class: "mb-0 d-block subtitle", text:json.topPromotion.sublineralt }).appendTo(sinnerdiv);
+  let sinnerdiv = $('<div />',{ class: "col" }).appendTo(d);
+  $('<span />',{ class: "title d-block", text: json.topPromotion.title}).appendTo(sinnerdiv);
+  $('<span />',{ class: "mb-0 mt-2 d-xs-block d-md-inline mr-2 subtitle", text: json.topPromotion.subliner }).appendTo(sinnerdiv);
+  $('<span />',{ class: "mb-0 d-block d-xs-block d-md-inline subtitle", text:json.topPromotion.sublineralt }).appendTo(sinnerdiv);
   let botd = $('<div />',{ class: "row mt-4 text-center" }).appendTo(container);
   let botinnerdiv = $('<div />',{ class: "col-12" }).appendTo(botd);
   $('<span />',{ class: "title", text:json.bottomPromotion.title }).appendTo(botinnerdiv);

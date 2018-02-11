@@ -7,7 +7,7 @@ include "helper.php";
   $cities = array("Ashdod","Ashkelon","Beer Sheva","Guivataym","Haifa","Ramat Gan","Tel Aviv");
   ?>
   <div class="container">
-    <div class="row settings text-center mt-3">
+    <div class="row settings text-center mt-3 mx-auto">
       <div class="col-10 offset-1">
         <img src="img/profile.jpg" alt="" class="img-fluid rounded-circle">
         <span class="ml-2 userdropname"><?php echo $user->name; ?></span>
@@ -27,7 +27,7 @@ include "helper.php";
             </div>
             <input type="email" class="form-control" placeholder="Email" name="email" value="<?php echo $user->email;?>" aria-label="Email" aria-describedby="mail-addon1">
           </div>
-          <div class="pl-0 col-6 mb-3">
+          <div class="pl-0 col-8 col-md-4 mb-3">
             <select class="form-control" name="city">
               <optgroup label="Cities">
                 <?php foreach ($cities as $c){ ?>
@@ -38,13 +38,13 @@ include "helper.php";
           </div>
           <div class="form-check col text-left mb-5">
             <label class="form-check-label small">
-              <input type="checkbox" name="push" class="form-check-input">
+              <input type="checkbox" name="push" class="form-check-input" <?php echo $user->push?"checked":""?>>
               I dont want be informed of news
             </label>
           </div>
 
           <input type="submit" class="btn btn-lg btn-success float-left" value="Save Changes">
-          <button type="button" class="btn btn-sm btn-danger">Logout</button>
+          <button type="button" class="btn btn-sm btn-danger float-md-right">Logout</button>
         </form>
       </div>
 

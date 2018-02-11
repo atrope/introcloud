@@ -17,7 +17,7 @@ $navitems = array(
     <div class="d-none d-md-block text-center">
       <a class="logo float-left" href=".">Logo</a>
       <form class="d-inline" action="searchAdv.php" method="post">
-        <input type="text" class="search" name="search" placeholder=" Search.." value=""></form>
+        <input type="text" class="search" name="search" placeholder=" Search for keyword or color" value=""></form>
       <div class="drop-user float-right">
 				<img src="img/profile.jpg" class="img-fluid rounded-circle" alt="profile img">
 			  <span class="userdropname"><?php echo $user->name;?></span>

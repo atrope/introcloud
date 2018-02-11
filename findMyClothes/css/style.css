@@ -220,8 +220,8 @@ span.subtitle { font-size: 0.71rem; }
 
 
 .recommendations ::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+    width: 0px;
+    background: transparent;
 }
 
 
@@ -329,18 +329,29 @@ footer{background-color: #1d94ca;padding: 30px 0; height: 230px;}
   form.rating {
     cursor: pointer;
 }
+.generic-cell:last-child{ margin-bottom:60px;}
 .recommendations .item img {     width: 100%;height: 169px;}
-.famous .item .imgcontainer { background: #FFF;    max-height: 100px;padding: 30px 5px;; height: 100px;}
-
+.famous .item .imgcontainer { background: #FFF;    max-height: 100px;padding: 30px 5px; height: 100px;}
+.settings{ max-width: 768px; }
 
 @media only screen and (min-width: 767px)  {
+  .generic-cell:last-child{ margin-bottom:0px;}
+
+  .topPromo div:first-child {
+    text-align: right;
+    order: 2;
+ }
+ span.title{ font-size:2.3rem;}
+ span.subtitle {font-size: 1.2rem;}
+
+
       .navbar.top{background:#FFF;
         height: 70px;
         line-height: 70px;
         }
 
         .recommendations .text-center {
-            white-space: unset;
+            white-space: inherit;
         }
         .recommendations .item{ margin-right: 5%}
       }

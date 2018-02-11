@@ -57,6 +57,9 @@ $title = "Find My Clothes - Store";
 </div>
 <?php
 }
-else { echo "Not Found :("; }
+else {
+    $errmsg = "Not Found";
+    include "error.php";
+  }
 include "footer.php";
 ?>

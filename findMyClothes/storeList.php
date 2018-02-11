@@ -13,7 +13,10 @@ include "helper.php";
 
     <div class="container">
   <?php
-  if (!$stores) echo "There are no stores with that product :(";
+  if (!$stores){
+    $errmsg = "There are no stores with that product";
+    include "error.php";
+  }
   else foreach ($stores as $store) { ?>
   <div class="generic-cell store mt-3">
     <a href="store.php?id=<?php echo $store->id;?>&pid=<?php echo $id;?>"><div class="row">

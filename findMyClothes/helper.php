@@ -16,14 +16,19 @@ function execSQL($query,$values,$return=true){
   $db = getDB();
   $st = $db->prepare($query);
   if ($st->execute($values)){
-    if($return)  return $st->rowCount()==1?$st->fetch():$st->fetchAll();
     if(stripos($query, "INSERT INTO") !== false) return $db->lastInsertId();
+    if($return)  return $st->rowCount()==1?$st->fetch():$st->fetchAll();
     return true;
   }
   return false;
 }
 function sanitizeName($name){
   return strtolower(str_replace(" ","",$name));
+}
+function viewProduct($uid,$pid){
+  $sql = "INSERT INTO 214_history(userId,productsId) values (:uid,:pid)";
+  $val = array(":uid" => $uid,":pid" => $pid);
+  return execSQL($sql,$val);
 }
 $user = execSQL("SELECT * from 214_users where id = :id",array(":id"=>$uid));
 

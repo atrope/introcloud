@@ -9,11 +9,17 @@ CREATE TABLE `214_products` (
   `gender` tinyint(2) unsigned NOT NULL,
   PRIMARY KEY (`id`)
 );
-CREATE TABLE `214_stores` (
+
+CREATE TABLE `214_history` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `country` int(11) unsigned NOT NULL,
-  PRIMARY KEY (`id`));
+  `userId` int(11) unsigned NOT NULL,
+  `productsId` int(11) unsigned NOT NULL,
+  UNIQUE KEY `UK_Unique` (`userId`,`productsId`),
+  PRIMARY KEY (`id`),
+  CONSTRAINT `pidT` FOREIGN KEY (`productsId`) REFERENCES `214_products` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `sidT` FOREIGN KEY (`userId`) REFERENCES `214_users` (`id`) ON DELETE CASCADE
+);
+
 
 CREATE TABLE `214_productsStores` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,

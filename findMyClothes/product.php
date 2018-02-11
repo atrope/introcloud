@@ -4,15 +4,21 @@ include "helper.php";
       include "header.php";
       $id = isset($_GET["id"]) && is_numeric($_GET["id"])?$_GET["id"]:0;
       $product = execSQL("SELECT p.id,p.title,p.color,p.description,p.features,p.care,c.name as country from 214_products p INNER JOIN 214_country c on p.country=c.id where p.id = :id", array(":id" => $id));
-      if(!$product) die("ID NOT FOUND");
-      $titlestack = $product->title;
+      $titlestack = $product?$product->title:"";
       include "topnav.php";
+      if(!$product){
+          $errmsg = "Invalid ID!";
+          include "error.php";
+        }
+      else {
+      viewProduct($uid,$id); //save to user list
       $specs = array(
         (object) array("alt"=>"$product->title #1","src"=>"img/products/$product->id/1.jpg"),
         (object) array("alt"=>"$product->title #2","src"=>"img/products/$product->id/2.jpg"),
-        (object) array("alt"=>"$product->title #3","src"=>"img/products/$product->id/3.jpg"),
+        (object) array("alt"=>"$product->title #3","src"=>"img/products/$product->id/3.jpg")
       );
-      ?><div class="container">
+      ?>
+      <div class="container">
 
     <div id="productCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
   <ol class="carousel-indicators round">
@@ -85,5 +91,6 @@ include "helper.php";
 
 </div>
 <?php
+}
   include "footer.php";
 ?>
