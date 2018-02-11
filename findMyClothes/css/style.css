@@ -335,23 +335,42 @@ footer{background-color: #1d94ca;padding: 30px 0; height: 230px;}
 .settings{ max-width: 768px; }
 
 @media only screen and (min-width: 767px)  {
+  .carousel-indicators.round li,.carousel-indicators.round .active{
+    height: auto;
+    width: 30%;
+    max-width: 30%;
+    top: 40px;
+    cursor:pointer;
+  }
+  .carousel-indicators.round .active,.carousel-indicators.round li:hover{
+    outline: 1px solid #3294ca8a;
+  }
+  .container.product div:first-child{ order: 2;}
+  .carousel-inner{    max-height: 350px;}
   .generic-cell:last-child{ margin-bottom:0px;}
-
   .topPromo div:first-child {
     text-align: right;
     order: 2;
- }
- span.title{ font-size:2.3rem;}
- span.subtitle {font-size: 1.2rem;}
-
-
-      .navbar.top{background:#FFF;
-        height: 70px;
-        line-height: 70px;
-        }
-
-        .recommendations .text-center {
-            white-space: inherit;
-        }
-        .recommendations .item{ margin-right: 5%}
-      }
+  }
+  span.title{ font-size:2.3rem;}
+  span.subtitle {font-size: 1.2rem;}
+  .navbar.top{
+    background:#FFF;
+    height: 70px;
+    line-height: 70px;
+  }
+  .recommendations .text-center {
+    white-space: inherit;
+  }
+  .recommendations .item{ margin-right: 5%}
+  .famous .item .imgcontainer {
+      max-height: 150px;
+      padding: 60px 5px;
+      height: 150px;
+  }
+    .famous .item {
+    width: 20%;
+    max-width: 20%;
+}
+.store{ max-width: 600px;}
+}

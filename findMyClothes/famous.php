@@ -10,14 +10,13 @@ $dates = array(
   (object) array("date"=>"2018-03-01","src"=>"img/stores/mango.png","name"=>"mango"),
   (object) array("date"=>"2018-04-05","src"=>"img/stores/nike.png","name"=>"nike"),
 );
-$a = "222";
 ?>
   <div class="container famous">
     <div class="row mt-3">
       <div class="col">
         <p><strong>Make your Clothe Famous!</strong></p>
-        <p><strong>Choose from these stores and attend</strong></p>
-        <p> <strong>the joint meeting we've set up</strong></p>
+        <p class="d-md-inline"><strong>Choose from these stores and attend</strong></p>
+        <p class="d-md-inline"> <strong>the joint meeting we've set up</strong></p>
       </div>
     </div>
     <?php foreach ($dates as $store) { ?>

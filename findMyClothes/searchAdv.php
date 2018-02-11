@@ -2,7 +2,7 @@
 include "helper.php";
 $search = isset($_POST["search"])?$_POST["search"]:"";
 $title = "Find My Clothes - Search";
-if($search) $products = execSQL("SELECT * from 214_products p where title LIKE :search or color = :color", array(":search" => "%$search%",":color"=>$search));
+if($search) $products = execSQL("SELECT * from 214_products p where title LIKE :search or color LIKE :color", array(":search" => "%$search%",":color"=>"%$search%"));
 $active = "Search";
 include "header.php";
 include "topnav.php";

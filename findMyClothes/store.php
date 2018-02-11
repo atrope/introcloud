@@ -11,10 +11,10 @@ $title = "Find My Clothes - Store";
   include "topnav.php";
   if($stores){
   ?>
-  <div class="container-fluid p-0">
+  <div class="container-fluid p-0 text-md-center mt-md-5 store">
     <img src="img/stores/<?php echo sanitizeName($stores->title);?>.png" class="img-fluid" alt="<?php echo $stores->title;?> Logo">
   </div>
-<div class="container">
+<div class="container store">
 <div class="row mt-3">
 <div class="col text-left">
 <form class="rating" action="#" method="post">

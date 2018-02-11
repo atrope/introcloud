@@ -4,6 +4,12 @@ include "helper.php";
       $active = "Search";
       include "header.php";
       include "topnav.php";
+      $category = array(
+        (object) array("value"=>"" , "name"=>"Select Category"),
+        (object) array("value"=>"0" , "name"=>"Women"),
+        (object) array("value"=>"1" , "name"=>"Men"),
+        (object) array("value"=>"2" , "name"=>"Kids"));
+      $cities = array("Select City","Ashdod","Ashkelon","Beer Sheva","Guivataym","Haifa","Ramat Gan","Tel Aviv");
       ?>
       <div class="container">
         <div class="row">
@@ -15,9 +21,36 @@ include "helper.php";
             </a>
           </div>
           <div class="col-md-5 offset-4 mt-5 d-none d-md-block">
-            <h5 class="mb-3">Search by name, tag or store</h5>
+            <h5 class="mb-3">Search by name, color, tag or store</h5>
             <form action="searchAdv.php" method="post">
+              <div class="row">
+
             <input type="text" class="search" name="search" placeholder="&#xf002; Search.." value="">
+            <div class="pl-0 col-6 mt-3">
+              <select class="form-control" name="category">
+                  <?php foreach ($category as $c){ ?>
+                    <option value="<?php echo $c->value;?>"><?php echo $c->name;?></option>
+                  <?php } ?>
+              </select>
+            </div>
+            <div class="pl-0 col-6 mt-3">
+              <select class="form-control" name="city">
+                  <?php foreach ($cities as $c){ ?>
+                    <option value="<?php echo $c;?>"><?php echo $c;?></option>
+                  <?php } ?>
+              </select>
+            </div>
+            <div class="form-check col-12 text-left mt-3">
+              <label class="form-check-label small">
+                <input type="checkbox" name="push" class="form-check-input" checked>
+                Show only recommended results
+              </label>
+            </div>
+            <div class="col text-center mt-5">
+              <input type="submit" class="btn btn-lg btn-success" value="Search">
+            </div>
+          </div>
+
             </form>
 
           </div>

@@ -11,19 +11,21 @@ include "helper.php";
           include "error.php";
         }
       else {
-      viewProduct($uid,$id); //save to user list
+      viewProduct($uid,$id); //save to user History
       $specs = array(
         (object) array("alt"=>"$product->title #1","src"=>"img/products/$product->id/1.jpg"),
         (object) array("alt"=>"$product->title #2","src"=>"img/products/$product->id/2.jpg"),
         (object) array("alt"=>"$product->title #3","src"=>"img/products/$product->id/3.jpg")
       );
       ?>
-      <div class="container">
-
-    <div id="productCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+  <div class="container product">
+    <div class="row">
+        <div id="productCarousel" class="carousel slide col-12 col-md-4" data-ride="carousel" data-interval="false">
   <ol class="carousel-indicators round">
-    <?php for ($i=0; $i < count($specs); $i++) { ?>
-      <li data-target="#productCarousel" data-slide-to="<?php echo $i;?>"<?php if ($i==0){ ?> class="active"<?php } ?>></li>
+  <?php foreach ($specs as $key => $element) { ?>
+      <li data-target="#productCarousel" data-slide-to="<?php echo $key;?>"<?php if ($key==0){ ?> class="active"<?php } ?>>
+        <img class="d-none d-md-block w-100 img-fluid" src="<?php echo $element->src; ?>" alt="<?php echo $element->alt; ?>">
+      </li>
     <?php }  ?>
   </ol>
   <div class="carousel-inner">
@@ -34,8 +36,9 @@ include "helper.php";
     <?php } ?>
   </div>
 </div>
+<div class="col-12 col-md-8">
   <div class="row mt-3">
-  <div class="col-5">
+  <div class="col-5 col-md-4 mt-md-3">
     <div class="sizes d-inline">
       <input type="radio" id ="small-product" name="sizeradio" value="S" checked>
       <label for="small-product">
@@ -55,7 +58,10 @@ include "helper.php";
       </label>
     </div>
   </div>
-  <div class="col-5 text-right">
+  <div class="col d-none d-md-block">
+  <h1><?php echo $titlestack;?></h1>
+</div>
+  <div class="col-5 col-md-12 text-right text-md-left">
     <form class="rating" action="#" method="post">
 
     <i class="fa fa-lg fa-star" aria-hidden="true" data-rate="1"></i>
@@ -65,14 +71,14 @@ include "helper.php";
     <i class="fa fa-lg fa-star-o" aria-hidden="true" data-rate="5"></i>
     </form>
   </div>
-  <div class="col-2 text-right">
+  <div class="col-2 col-md-12 text-right text-md-left mt-md-3">
     <a href="#" class="bookmark">
       <i class="fa fa-lg fa-bookmark-o" aria-hidden="true"></i>
     </a>
   </div>
   </div>
   <div class="row mt-3">
-    <div class="col">
+    <div class="col-12 col-md-6 mx-auto mt-md-5 mb-md-3">
 
   <button type="button" class="btn btn-block btn-info bg-lightBlue btn-find-store"><i class="fa fa-building px-3" aria-hidden="true"></i>Find the Clothe</button>
 </div>
@@ -87,6 +93,8 @@ include "helper.php";
       <b>Made in <?php echo $product->country;?></b>
     </span>
   </div>
+</div>
+</div>
 </div>
 
 </div>
