@@ -59,7 +59,7 @@ include "helper.php";
     </div>
   </div>
   <div class="col d-none d-md-block">
-  <h1><?php echo $titlestack;?></h1>
+  <h2><?php echo $titlestack;?></h2>
 </div>
   <div class="col-5 col-md-12 text-right text-md-left">
     <form class="rating" action="#" method="post">

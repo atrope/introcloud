@@ -4,7 +4,7 @@ $navitems = array(
   (object) array("name"=>"Search","page"=>"search.php","icon"=> "search","text"=>"Search"),
   (object) array("name"=>"History","page"=>"myHistory.php","icon"=> "list-ol","text"=>"Clothes"),
   (object) array("name"=>"Settings","page"=>"settings.php","icon"=> "cog","text"=>"Settings"),
-  (object) array("name"=>"Watchlist","page"=>"#","icon"=> "bookmark","text"=>"Watchlist"),
+  (object) array("name"=>"Watchlist","page"=>"watchlist.php","icon"=> "bookmark","text"=>"Watchlist"),
   (object) array("name"=>"Famous","page"=>"famous.php","icon"=> "clock-o","text"=>"Be Famous")
 );
 ?>
