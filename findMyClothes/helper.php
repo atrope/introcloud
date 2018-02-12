@@ -30,6 +30,12 @@ function viewProduct($uid,$pid){
   $val = array(":uid" => $uid,":pid" => $pid);
   return execSQL($sql,$val);
 }
+function generateBreadcrumb(){
+  $file = basename($_SERVER["SCRIPT_FILENAME"], '.php');
+  $split = preg_split('/(?=[A-Z])/',$file);
+  $file = implode($split," ");
+  return ucwords($file);
+}
 $user = execSQL("SELECT * from 214_users where id = :id",array(":id"=>$uid));
 
 ?>

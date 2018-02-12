@@ -30,7 +30,9 @@ $navitems = array(
       <ul class="nav navbar-nav d-inline-flex w-100 text-center">
     <li class="nav-item">
       <ul class="list-inline-mb-0">
-        <?php foreach ($navitems as $ni){ ?>
+        <?php foreach ($navitems as $ni){
+          if (isset($active) && $active === $ni->name) $name = $ni->name;
+          ?>
             <li class="pl-2 pr-2 mr-3 list-inline-item<?php if (isset($active) && $active === $ni->name) echo " active";?>"> <a href ="<?php echo $ni->page;?>"><i class="pr-2 fa fa-<?php echo $ni->icon;?>"></i><?php echo $ni->text;?></a></li>
         <?php } ?>
       </ul>
@@ -39,4 +41,5 @@ $navitems = array(
 
     </div>
   </nav>
-  <div class="wrapper">
+<div class="wrapper">
+  <?php include "breadcrumbs.php" ?>

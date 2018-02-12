@@ -7,6 +7,12 @@ html,b,strong {
  button {
      cursor: pointer;
 }
+ol.breadcrumb {
+    background: transparent;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+}
  .navbar-icon {
      color: #FFF;
      font-size: 1.5rem;

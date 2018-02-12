@@ -11,7 +11,7 @@ function createCard(item,appendto){
 
 $( document ).ready(function() {
 $.getJSON("./index.json",function(json){
-  let container = $('<div />',{ class: "container" }).prependTo($('nav + .wrapper'));
+  let container = $('<div />',{ class: "container" }).appendTo($('nav + .wrapper'));
   let d = $('<div />',{ class: "row mt-3 topPromo" }).appendTo(container);
   let innerdiv = $('<div />',{ class: "col" }).appendTo(d);
   let img = $('<img />',{ class: 'img-fluid',src: json.topPromotion.img }).appendTo(innerdiv);
